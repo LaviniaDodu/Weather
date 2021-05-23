@@ -3,7 +3,7 @@ class Fetch {
     async getCurrent(input) {
       const myKey = "cdb91b50203dabb6954097b1c812fa6d";
   
-      //make request to url
+
   
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${input}&lang=it&units=metric&appid=${myKey}`
@@ -27,9 +27,7 @@ class Fetch {
     }
   
     populateUI(data) {
-      //de-structure vars
-  
-      //add them to inner HTML
+      
   
       this.uiContainer.innerHTML = `
           
@@ -79,12 +77,12 @@ class Fetch {
   }
   
   
-  //inst classes//
+ 
   
   const ft = new Fetch();
   const ui = new UI();
   
-  //add event listeners//
+ 
   const search = document.querySelector("#searchUser");
   const button = document.querySelector("#submit");
   button.addEventListener("click", () => {
@@ -101,7 +99,7 @@ class Fetch {
   });
   });
   
-  //event listener for local storage
+ 
   
   window.addEventListener("DOMContentLoaded", () => {
   const dataSaved = ui.getFromLS();
